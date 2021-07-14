@@ -1,4 +1,4 @@
-import logo from "../../images/Logo.svg";
+import logo from "../../../images/Logo.svg";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
   </div>
       <button className="nav-link btn button1 " href="#otherresources"> Sign Up 
       </button>
-      <button className="nav-link btn button2" href="#otherresources"> 
+      <button className="nav-link btn button2 ml" href="#otherresources"> 
       Login
       </button> 
 </nav>

@@ -1,8 +1,7 @@
 .navbar {
   font-size: 1.25em;
   padding: 1% 5% 1% 5% !important;
-  background-color: #eeeeee;
-  overflow: hidden;
+  background-color: #eeeeee; 
   font-family: Montserrat;
   box-shadow: 5px 4px 5px #888888;
 }
@@ -32,6 +31,9 @@
   padding: 12px 40px 12px 40px !important;
   max-height: 2.5rem;
   font-size: 1.05rem !important;
+}
+
+.ml{
   margin-left: 40px;
 }
 

@@ -31,6 +31,7 @@ const LoginForm = () => {
           if(response.status==200)
           {
             cookie.save("key", email, { path: "/" });
+            window.location.href = "http://localhost:3000/projects"
           }
           return data;
         })

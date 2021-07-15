@@ -1,5 +1,9 @@
+import React, { useState } from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
-const Form = () => {
+
+const SignupForm = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -28,6 +32,7 @@ const Form = () => {
         <div className="Login">
           <Form onSubmit={handleSubmit}>
             <Form.Group size="lg" controlId="email"> 
+            <Form.Label  style={{ padding:"0px 0px 20px 0px" }}>Email:</Form.Label>
               <Form.Control style={{ border:"0px 5px" }} className ="input"
                 autoFocus
                 type="email"
@@ -52,7 +57,7 @@ const Form = () => {
               />
             </Form.Group>
             <Button className= "loginbutton" block size="lg" type="submit" >
-              Login
+              Sign Up
             </Button>
           </Form>
         </div>
@@ -60,4 +65,4 @@ const Form = () => {
       );
 };
 
-export default Form ;
+export default SignupForm ;

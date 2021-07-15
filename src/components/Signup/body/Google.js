@@ -1,4 +1,5 @@
 import GoogleLogin from "react-google-login";
+import cookie from "react-cookies";
 
 const Google = () => {
   const handleLogin = async (googleData) => {
@@ -15,13 +16,17 @@ const Google = () => {
 
     await fetch("http://localhost:5000/users/google/signup", requestOptions).then((response) => {
       const data = response.json();
+      if(response.status==200)
+          {
+            cookie.save("key", googleData.profileObj.email, { path: "/" });
+            window.location.href = "http://localhost:3000/projects"
+          }
       return data;
     }).then((data) => {
 
       if (data.status === 200) {
         // Redirect here
         console.log("Login Successful");
-        window.location.href = "http://localhost:3000/"
       } else {
         // Error handling
         console.log("Login Unsuccessful");

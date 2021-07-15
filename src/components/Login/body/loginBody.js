@@ -1,13 +1,17 @@
 import './loginBody.css'
 import img4 from "../../../images/loginimg.svg";
+import Form from "./Form";
+import Google from "../../Signup/body/Google";
+
 
 
 const loginBody = () => {
     return(
-        <div className="row section1">
+        <div className="row loginBody">
             <div className="col-lg-5">
-                 <form></form>
-            <div className="vert"></div>
+            <h2 className="blue extra-bold">Login</h2>
+                 <Form /> 
+                 <Google />
             </div>
             <div className="col-lg-7">
             <img src={img4} className=" " alt="timemator"/>

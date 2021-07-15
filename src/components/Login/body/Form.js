@@ -5,19 +5,17 @@ import cookie from "react-cookies";
 import "./Form.css";
 
 
-const SignupForm = () => {
+const LoginForm = () => {
 
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
+    const [password, setPassword] = useState(""); 
 
     async function handleSubmit(event) {
         event.preventDefault();
     
         const body = JSON.stringify({
           email,
-          password,
-          confirmPassword
+          password, 
         })
     
         const requestOptions = {
@@ -28,12 +26,11 @@ const SignupForm = () => {
           body
         }
     
-        await fetch("http://localhost:5000/users/signup", requestOptions).then((response) => {
+        await fetch("http://localhost:5000/users/signin", requestOptions).then((response) => {
           const data = response.json();
-          if(response.status===200)
+          if(response.status==200)
           {
             cookie.save("key", email, { path: "/" });
-            window.location.href = "http://localhost:3000/projects"
           }
           return data;
         })
@@ -61,16 +58,9 @@ const SignupForm = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
-            <Form.Group size="lg" controlId="confirmPassword">
-              <Form.Control className="input"
-                placeholder="Confirm Password"
-                type="password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </Form.Group>
+            
             <Button className= "signupBtn" block size="lg" type="submit" >
-              Register
+              Login
             </Button>
           </Form>
         </div>
@@ -78,4 +68,4 @@ const SignupForm = () => {
       );
 };
 
-export default SignupForm ;
+export default LoginForm ;

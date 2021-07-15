@@ -3,7 +3,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Projects from "./components/Protected/ProtectedRoute";
+import Projects from "./pages/Projects";
+import ProtectedRoute from "./components/Protected/ProtectedRoute";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() { 

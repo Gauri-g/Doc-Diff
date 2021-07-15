@@ -4,7 +4,7 @@ import img2 from "../../../images/img2.svg";
 
 const section2 = () => {
   return (
-    <div className="section2 ">
+    <div className="section2 " id="howitworks">
       <h1 className="blue sec2head extra-bold">How it works?</h1>
       <div className="row cards">
         <div className="col-lg-4">

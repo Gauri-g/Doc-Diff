@@ -4,7 +4,7 @@ import img1 from "../../../images/img1.svg";
 
 const section1 = () => {
     return(
-        <div className="row section1 ">
+        <div className="row section1 " id="home">
             <div className="col-lg-5">
                 <h1 className="extra-bold">Doc Diff</h1>
                 <h3 className="blue">By ISTE-VIT</h3>

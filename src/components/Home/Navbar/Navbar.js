@@ -9,20 +9,20 @@ const Navbar = () => {
 
   return (
 
-    <nav class="navbar navbar-expand-lg "> 
+    <nav className="navbar navbar-expand-lg fixed-top "> 
       <a href="/" className="logo-margin">
         <img src={logo} className="logo-" alt="timemator"/>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a className="nav-link dot px-5" href="/#">      ●      </a>
-            <a class="nav-item nav-link" href="#">How it works</a>
-            <a className="nav-link dot px-5" href="/#">      ●      </a>
-            <a class="nav-item nav-link" href="#">About us</a>  
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <a className="nav-item nav-link active" href="#home">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-link dot px-5 disabled" href="/#">      ●      </a>
+            <a className="nav-item nav-link" href="#howitworks">How it works</a>
+            <a className="nav-link dot px-5 disabled" href="/#">      ●      </a>
+            <a className="nav-item nav-link" href="#aboutus">About us</a>  
           </div>
       </div>
       <button className="nav-link btn button1 " onClick={() => history.push('/signup')}>

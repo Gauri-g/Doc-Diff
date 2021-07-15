@@ -40,8 +40,7 @@ const SignupForm = () => {
         <div className="signup">
           <Form onSubmit={handleSubmit}>
             <Form.Group size="lg" controlId="email"> 
-              <Form.Control style={{ border:"0px 5px" }} className ="input"
-                autoFocus 
+              <Form.Control style={{ border:"0px 5px" }} className ="input" 
                 placeholder="Email Address"
                 type="email"
                 value={email}

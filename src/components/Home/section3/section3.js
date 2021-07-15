@@ -6,7 +6,7 @@ import wave from "../../../images/wave.svg";
 const section3 = () => {
   return (
     <>
-      <div className="section3 ">
+      <div className="section3 " id="aboutus">
         <h1 className="blue sec2head extra-bold">About Us</h1>
         <div className="row">
           <div className="col-lg-6 sec3txt">

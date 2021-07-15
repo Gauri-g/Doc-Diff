@@ -6,12 +6,20 @@
     box-shadow: 5px 4px 5px #888888;
   }
   
+  a.disabled {
+    pointer-events: none; 
+}
+
   .dot {
-    color: #00adb5;
+    color: #00adb5 !important;
   } 
   
   .nav-item {
     color: black;
+  }
+
+  .nav-item:hover{
+    font-weight: bold;
   }
   .logo- {
     max-width: 70%;

@@ -15,6 +15,15 @@
   align-items: center !important;
 }
 
+.nav-item:hover , .nav-item:active{
+  font-weight: bold;
+  color:black
+}
+
+a.disabled {
+  pointer-events: none; 
+}
+
 .nav-item {
   color: black;
 }
@@ -46,4 +55,8 @@
   background-color: transparent;
   font-weight: bold !important;
   color: black;
+}
+
+.button:focus , .button:hover{ 
+  outline: none !important;
 }

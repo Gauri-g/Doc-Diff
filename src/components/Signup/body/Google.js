@@ -1,58 +1,42 @@
 import GoogleLogin from "react-google-login";
-import React, { useState } from "react";
 
 const Google = () => {
+  const handleLogin = async (googleData) => {
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
+    const body = JSON.stringify({ tokenId: googleData.tokenId })
 
-  const handleLogin = async (googleData) => { 
-      setEmail(googleData.profileObj.email);
-      setPassword(googleData.googleId);
-      setConfirmPassword(googleData.googleId);
-    console.log(googleData.googleId);
-    console.log(googleData.profileObj.email);
-     const body = JSON.stringify({
-        email,
-        password,
-        confirmPassword
-      })
-  
-      const requestOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body
+    }
+
+    await fetch("http://localhost:5000/users/google/signup", requestOptions).then((response) => {
+      const data = response.json();
+      return data;
+    }).then((data) => {
+
+      if (data.status === 200) {
+        // Redirect here
+        console.log("Login Successful");
+        window.location.href = "http://localhost:3000/"
+      } else {
+        // Error handling
+        console.log("Login Unsuccessful");
       }
-  
-      const response = await fetch("http://localhost:5000/users/signup", requestOptions).then((response) => {
-        const data = response.json();
-        return data;
-      })
-        .then((data) => { console.log(data) })
-        .catch((error) => {
-          console.log(error.message);
-        });
-    if(response.status === 200)
-    {
-      // redirect here
-      console.log("login succesful"); 
-    }
-    else
-    {
-      //  error
-      console.log("login unsuccesful");
-    }
+    })
+      .catch((error) => { console.log(error.message); });
   };
+
   return (
     <GoogleLogin
-      clientId="411323907320-ha03ooc391sr04og9c52cc3glc3ofsnk.apps.googleusercontent.com"
+      clientId="386647217720-lmsafghdplskeosdav51kdh0tu6c2sdq.apps.googleusercontent.com"
       buttonText="Sign up with Google"
       onSuccess={handleLogin}
       className="google"
-      onFailure={handleLogin}
+      onFailure={(error) => { console.log(error) }}
       cookiePolicy={"single_host_origin"}
     />
   );

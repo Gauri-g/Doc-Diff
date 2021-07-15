@@ -5,7 +5,11 @@
     border-radius: 0px !important;
     margin-top: 10%; 
 }
-  
+ 
+.signup > Form >Form :focus {
+    outline: 0px !important;
+}
+
 .signup{
     padding-right: 25%;
 }

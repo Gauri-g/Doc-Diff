@@ -1,12 +1,8 @@
-import React from 'react';
-import { useHistory } from "react-router-dom";
 import logo from "../../../images/Logo.svg";
-import "./Navbar.css";
+import "./Navbar2.css";
 
 const Navbar = () => {
-
-  const history = useHistory();
-
+ 
   return (
 
     <nav class="navbar navbar-expand-lg "> 
@@ -25,12 +21,6 @@ const Navbar = () => {
             <a class="nav-item nav-link" href="#">About us</a>  
           </div>
       </div>
-      <button className="nav-link btn button1 " onClick={() => history.push('/signup')}>
-        Sign Up 
-      </button>
-      <button className="nav-link btn button2 ml" onClick={() => history.push('/login')}> 
-        Login 
-      </button> 
     </nav>
   );
 };

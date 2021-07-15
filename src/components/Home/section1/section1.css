@@ -1,15 +1,16 @@
-.section1 { 
+.section1 {
     background-color: white;
     padding: 10% 5% 10% 10% !important;  
-    font-family: Montserrat !important; 
+    font-family: Montserrat !important;
+    margin-right: 0px !important;
 }
 
-.section1 > div >h1{
+.section1 > div > h1{
     font-size: 60px;
     font-weight: 900;
 }
 
-.section1 > div >h3{
+.section1 > div > h3{
     font-size: 30px;
     font-weight: bolder;
 }

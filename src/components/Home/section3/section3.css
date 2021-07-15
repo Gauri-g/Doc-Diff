@@ -1,12 +1,6 @@
 .section3{
-    background-color: white;
-    padding: 5% 5% 5% 5% !important;  
-    font-family: Montserrat !important; 
-    background-image:url(/src/images/wave.svg);
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-    background-position: 0% 220%;
-    overflow: hidden;
+    padding: 5% 5% 0 5% !important;  
+    font-family: Montserrat !important;
 }
 
 .sec3txt{
@@ -16,4 +10,8 @@
 
 .img3{
     margin-top: 8%;
+}
+
+.wave {   
+    width: 100% ;
 }

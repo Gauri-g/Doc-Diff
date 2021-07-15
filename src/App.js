@@ -3,6 +3,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Projects from "./components/Protected/ProtectedRoute";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() { 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/signup"  >
             <Signup />
           </Route>  
+          <ProtectedRoute path="/projects" redirect="/" component={Projects} /> 
           <Route path="" render={props => {
             return <Redirect to="/" />
           }}

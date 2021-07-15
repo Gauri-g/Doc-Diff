@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import cookie from "react-cookies";
 import "./Form.css";
 
 
@@ -29,6 +30,10 @@ const SignupForm = () => {
     
         const response = await fetch("http://localhost:5000/users/signup", requestOptions).then((response) => {
           const data = response.json();
+          if(response.status==200)
+          {
+            cookie.save("key", email, { path: "/" });
+          }
           return data;
         })
           .then((data) => { console.log(data) })

@@ -1,7 +1,7 @@
 import GoogleLogin from "react-google-login";
 import cookie from "react-cookies";
 
-const Google = () => {
+const Google = ({text}) => {
   const handleLogin = async (googleData) => {
 
     const body = JSON.stringify({ tokenId: googleData.tokenId })
@@ -16,7 +16,7 @@ const Google = () => {
 
     await fetch("http://localhost:5000/users/google/signup", requestOptions).then((response) => {
       const data = response.json();
-      if(response.status==200)
+      if(response.status===200)
           {
             cookie.save("key", googleData.profileObj.email, { path: "/" });
             window.location.href = "http://localhost:3000/projects"
@@ -38,7 +38,7 @@ const Google = () => {
   return (
     <GoogleLogin
       clientId="386647217720-lmsafghdplskeosdav51kdh0tu6c2sdq.apps.googleusercontent.com"
-      buttonText="Sign up with Google"
+      buttonText={text}
       onSuccess={handleLogin}
       className="google"
       onFailure={(error) => { console.log(error) }}

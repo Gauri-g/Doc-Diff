@@ -28,7 +28,7 @@ const LoginForm = () => {
     
         await fetch("http://localhost:5000/users/signin", requestOptions).then((response) => {
           const data = response.json();
-          if(response.status==200)
+          if(response.status===200)
           {
             cookie.save("key", email, { path: "/" });
             window.location.href = "http://localhost:3000/projects"

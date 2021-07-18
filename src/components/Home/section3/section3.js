@@ -1,6 +1,12 @@
 import "./section3.css";
 import img3 from "../../../images/img3.svg";
 import wave from "../../../images/wave.svg";
+import linkedin from "../../../images/linkedin.svg";
+import mail from "../../../images/mail.svg";
+import youtube from "../../../images/youtube.svg";
+import facebook from "../../../images/facebook.svg";
+import twitter from "../../../images/twitter.svg";
+import instagram from "../../../images/instagram.svg";
 
 
 const section3 = () => {
@@ -17,7 +23,29 @@ const section3 = () => {
           </div>
         </div>
       </div>
+      <div className="footer">
         <img src={wave} className="wave" alt="timemator" />
+        <div className="icons" >
+          <a className="icon" href="/">
+            <img src={mail} />
+          </a>
+          <a className="icon" href="/">
+            <img src={facebook} />
+          </a>
+          <a className="icon" href="/">
+            <img src={twitter} />
+          </a>
+          <a className="icon" href="/">
+            <img src={instagram} />
+          </a>
+          <a className="icon" href="/">
+            <img src={youtube} />
+          </a>
+          <a className="icon" href="/">
+            <img src={linkedin} />
+          </a>
+        </div>
+        </div>
     </>
   );
 };

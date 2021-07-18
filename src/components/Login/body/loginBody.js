@@ -4,7 +4,6 @@ import Form from "./Form";
 import Google from "../../Signup/body/Google";
 
 
-
 const loginBody = () => {
     return(
         <div className="row loginBody">
